@@ -20,7 +20,7 @@ int main()
 {
 	const int size = 32;	/* input size */
 	const char *quit = "exit";
-	char command[size];
+	char command[32];
 
 	printf("Command: ");
 	/* fetch input */
