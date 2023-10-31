@@ -3,7 +3,31 @@
 
 char *sysin(const char *user_agent)
 {
-	/* decisions are made here */
+
+	if ( strstr( user_agent, "Macintosh" ) )
+	{
+		return "Macintosh";
+	}
+	else if ( strstr( user_agent, "X11" ) )
+	{
+		return "X11";
+	}
+	else if ( strstr( user_agent, "Windows" ) )
+	{
+		return "Windows";
+	}
+	else if ( strstr( user_agent, "Linux" ) )
+	{
+		if ( strstr( user_agent, "Linux" ) && strstr( user_agent, "Mobile" ) )
+		{
+			return "Linux Mobile";
+		}
+		else
+		{
+			return "Linux";
+		}
+	}
+
 	return("Unknown");
 }
 

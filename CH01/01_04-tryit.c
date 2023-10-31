@@ -15,8 +15,17 @@ int main()
 	   range from 0 to 99 */
 	sensor = rand() % 100;
 
-	printf("Sensor reports: %d",sensor);
+	printf("Sensor reports: %d\n",sensor);
 	/* guide the robot */
 
+	if ( sensor < min || sensor > max )
+	{
+		printf("Robot off course");
+	}
+	else
+	{
+		printf("Robot on course!");
+	}
+	
 	return(0);
 }

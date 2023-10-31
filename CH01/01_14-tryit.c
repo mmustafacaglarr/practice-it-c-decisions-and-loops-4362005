@@ -11,8 +11,8 @@ int main()
 
 	for( x=0; x<size; x++ )
 	{
-		if( score[x] > max )
-			max = score[x];
+		/*if( score[x] > max ) max = score[x];*/
+		max = ( score[x] > max ) ? score[x] : max;
 	}
 
 	printf("The maximum value is %d\n",max);

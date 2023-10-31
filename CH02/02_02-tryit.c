@@ -3,13 +3,16 @@
 int main()
 {
 	int h;
+	static int LOOP_LİMİT = 10;
+	float total;
 
-	/* initialize h */
-	while( /* loop while true */ )
+	h = 1;
+	while( h <= LOOP_LİMİT )
 	{
-		printf("%d\n",h);
-		/* trigger */
+		total = 1.0/h +total;
+		printf( "%2.d\n", h++ );
 	}
 
+	printf("The total is %f\n",total);
 	return(0);
 }

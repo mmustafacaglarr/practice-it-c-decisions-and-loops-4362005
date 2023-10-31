@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 int main()
 {
 	const int size = 10;
@@ -10,9 +10,9 @@ int main()
 
 	for( x=0; x<size; x++ )
 	{
-		printf("%d is odd/even\n",a[x]);
+		(a[x] % 2 == 0) ? printf(" %.2d %.6s\n", a[x], "is even") : printf(" %.2d %.6s\n", a[x], "is odd");
 	}
-
+	puts(" calculation done!");
 
 	return(0);
 }

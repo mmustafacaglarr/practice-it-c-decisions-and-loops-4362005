@@ -11,12 +11,20 @@ int main()
 	/* outer loop to the next-to-last element */
 	for( a=0; a<size-1; a++ )
 	{
-		/* bubble sort here */
+		for (b = a + 1; b < size ; b++)
+		{
+			if (score[a] > score[b])
+			{
+				temp = score[a];
+				score[a] = score[b];
+				score[b] = temp;
+			}
+		}
 	}
 
 	/* output the sorted list */
 	for( a=0; a<size; a++ )
-		printf("%d\n",score[a]);
+		printf("%2d\n",score[a]);
 
 	return(0);
 }
